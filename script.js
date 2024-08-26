@@ -1,27 +1,59 @@
-function selecionarPrato (botaoClicado){
-    const botaoSelecionadoAnteriormente = document.querySelector('.refeições .selecionado');
-    if (botaoSelecionadoAnteriormente !== null){
-        botaoSelecionadoAnteriormente.classList.remove('selecionado')
+let botaoRefeicao;
+
+function selecionarPrato (prato){
+    const clearSelection = document.querySelector('.refeições .selecionado', );
+   
+
+    if (clearSelection !== null){
+        clearSelection.classList.remove('selecionado');
     }
-    const botao = document.querySelector(botaoClicado);
-    botao.classList.add('selecionado');
+
+    prato.classList.add('selecionado');
+    botaoRefeicao = prato.innerHTML;
+    verificaPreenchimento ()
 }
 
+let botaoBeBida;
 
-function selecionarBebida (botaoClicado){
-    const botaoSelecionadoAnteriormente = document.querySelector('.bebidas .selecionado');
-    if (botaoSelecionadoAnteriormente !== null){
-        botaoSelecionadoAnteriormente.classList.remove('selecionado')
+function selecionarBebida (botaoThisBebida){
+    const clearSelection = document.querySelector('.bebidas .selecionado');
+    if (clearSelection !== null){
+        clearSelection.classList.remove('selecionado')
     }
-    const botao = document.querySelector(botaoClicado);
-    botao.classList.add('selecionado');
+
+    botaoThisBebida.classList.add('selecionado');
+
+    botaoBeBida = botaoThisBebida.innerHTML;
+    verificaPreenchimento ()
 }
 
-function selecionarSobremesa (botaoClicado){
-    const botaoSelecionadoAnteriormente = document.querySelector('.sobremesas .selecionado');
-    if (botaoSelecionadoAnteriormente !== null){
-        botaoSelecionadoAnteriormente.classList.remove('selecionado')
+let botaoSobremesa;
+
+function selecionarSobremesa (botaoThisSobremesa){
+    const clearSelection = document.querySelector('.sobremesas .selecionado');
+    if (clearSelection !== null){
+        clearSelection.classList.remove('selecionado')
     }
-    const botao = document.querySelector(botaoClicado);
-    botao.classList.add('selecionado');
+    botaoThisSobremesa.classList.add('selecionado');
+    botaoSobremesa = botaoThisSobremesa.innerHTML;
+    verificaPreenchimento ()
+}
+
+function verificaPreenchimento (){
+    if (botaoRefeicao !== undefined){
+       if (botaoBeBida !== undefined){
+        if (botaoSobremesa !== undefined){
+            const habilitarButton = document.querySelector('.fechar-pedido')
+            habilitarButton.removeAttribute('disabled')
+            habilitarButton.innerHTML = "Finalizar Pedido";
+            habilitarButton.classList.add('button-selecionado')    
+        }
+        }
+    }
+}
+
+function mostrarIcon(){
+    
+        
+    
 }
