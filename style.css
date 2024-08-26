@@ -1,0 +1,149 @@
+body{
+    font-family: roboto;
+    background-color: #E5E5E5;
+    box-sizing: border-box;
+}
+
+
+.topo{
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+}
+
+.topo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 10px;
+    height: 100%;
+}
+
+.logo {
+    Font-family: Righteous;
+    Font-style: Regular;
+    Font-size: 44px;
+    Line-height: 55px;
+    Line-height: 100%;
+    Letter-spacing: -1.2%;
+    color: white;
+}
+
+.slogan{
+    Font-style: Regular;
+    Font-size: 18px;
+    Line-height: 21px;
+    Line-height: 100%;
+    color: white;
+}
+
+/* Divisória entre topo e conteudo principal */
+
+.container-principal {
+    width: 414px;
+    margin: 92px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.meal {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container{
+    overflow-x: scroll;
+    display: flex;
+    gap: 20px;
+}
+
+.title h1 {
+    font-family: Righteous;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    text-align: left;    
+    margin: 10px 0;
+} 
+
+
+.meal-card{
+    height: 216px;
+    width: 172px;   
+    border-radius: 9px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.meal-card h2{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 144px;
+
+}
+
+.meal-card p {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 144px;
+}
+
+img {
+    border-radius: 4px;
+    width: 144px;
+    height: 87px;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 92px;
+    background-color: white;
+
+}
+
+.footer-conteudo {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-conteudo button {
+    text-align: center  ;
+    height: 53px;
+    width: 95%;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    border: none;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    text-align: center;
+    color: white;
+}
